@@ -1,0 +1,47 @@
+* {
+  /*リセットCSS*/
+  /*ブラウザごとにデフォルトで適用されるマージン幅のリセット*/
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  color: #d95204;
+  top: 0;
+}
+
+body{
+  font-family: 'Noto Sans JP';
+  margin: auto;
+  width: 1200px;
+}
+
+.header {
+  background: #f2b84b;
+  height: 100px;
+  display: flex;
+}
+
+.headerLeft__logo {
+  float: left;
+  padding: 18px 6px 18px 50px;
+}
+
+.headerLeft__text { 
+  font-size: 36px;
+  text-transform: uppercase;
+  line-height: 100px;
+}
+
+.header__itemList {
+  /*ヘッダ内で右寄せ*/
+  display: flex;
+  margin: auto 0 auto auto;
+
+}
+
+.header__item {
+  font-size: 24px;
+  padding-right: 50px;
+  list-style: none;
+}
