@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-witdh, initial-scale, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,500,700,900&display=swap&subset=japanese" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <title>Saycheese's Portfolio</title>
   </head>
   <body>
@@ -13,56 +14,83 @@
       <img class="headerLeft__logo" src="images/title_logo.png" alt="">
       <h1 class="headerLeft__text">SAYCHEESE'S PORTFOLIO</h1>
       <ul class="header__itemList">
-        <li class="header__item"><a href=".">ABOUT</a></li>
-        <li class="header__item"><a href="#">WORKS</a></li>
-        <li class="header__item"><a href="#">CONTACT</a></li>
+        <li class="header__item"><a class="header__itemLink" href="index.html">ABOUT</a></li>
+        <li class="header__item"><a class="header__itemLink" href="#">WORKS</a></li>
+        <li id="contact_show" class="header__item"><a class="header__itemLink" href="#">CONTACT</a></li>
       </ul>
     </header>
 
-    <div class="main">
-
-      <h2>ABOUT</h2>
-      <p>こんにちは。Saycheeseという名前でWEB制作のお仕事を承っております。</p>
-
-      <div class="skill__panel">
-        <img src="images/frontEnd_icon.png" alt="">
-        <p>
-        デザイン〜コーディングまでワンストップで制作するため、
-        時間、経費を削減できます。（デザインのみ、コーディングのみも承ります）
-        </p>
-        <ul class="skill__itemList">
-          <li class="skill__item">HTML</li>
-          <li class="skill__item">CSS</li>
-          <li class="skill__item">JavaScript(jQuery等)</li>
-        </ul>
+    <div id="contact_modal" class="contact__modal">
+      <div class="contact__form">
+        <form class="contactForm__cotainer" action="#">
+          <h2 class="contactForm__title">お問い合わせフォーム</h2>
+          <p class="contactForm__text">名前を入力してください(必須)</p>
+          <input class="contactForm__input" type="text" >
+          <p class="contactForm__text">emailを入力してください(必須)</p>
+          <input class="contactForm__input" type="email">
+          <p class="contactForm__text">お問合せ内容入力(必須)</p>
+          <input class="contactForm__input" type="text">
+          <div class="contactForm__submit">送信</div>
+        </form>
       </div>
+    </div>
 
-      <div class="skill__panel">
-        <img src="images/backend_icon.png" alt="">
-        <p>バックエンド、インフラについても構築経験がありますので、
-        作成後のレンタルサーバへのデプロイ、運用も可能です。</p>
-        <ul class="skill__itemList">
-          <li class="skill__item">HTML</li>
-          <li class="skill__item">CSS</li>
-          <li class="skill__item">JavaScript(jQuery等)</li>
-        </ul>
+    <div class="main">
+      <div class="main__base">
+
+        <h2 class="main__title">ABOUT</h2>
+        <p class="main__subtitle">こんにちは。Saycheeseという名前でWEB制作のお仕事を承っております。</p>
 
         <div class="skill__panel">
-          <img src="images/others_icon.png" alt="">
-          <p>Webサイト、ブログのWordPress移行、
-          フレームワーク(Laravel等)利用のアプリケーション作成、その他対応いたします。</p>
-          <ul class="skill__itemList">
-            <li class="skill__item">WordPress</li>
-            <li class="skill__item">Laravel</li>
-            <li class="skill__item">Git(Github)を利用した制作</li>
-          </ul>
+          <img class="skill__img" src="images/frontEnd_icon.png" alt="">
+          <div class="skill__right">
+            <p>
+            デザイン〜コーディングまでワンストップで制作するため、<br>
+            時間、経費を削減できます。（デザインのみ、コーディングのみも承ります）
+            </p>
+            <ul class="skill__itemList">
+              <li class="skill__item">HTML</li>
+              <li class="skill__item">CSS</li>
+              <li class="skill__item">JavaScript(jQuery等)</li>
+            </ul>
+          </div>
         </div>
 
-        <footer>
-          <p>©Copyright 2020 Saycheese</p>
-        </footer>
+        <div class="skill__panel">
+          <img class="skill__img" src="images/backend_icon.png" alt="">
+          <div class="skill__right">
+            <p>バックエンド、インフラについても構築経験がありますので、<br>
+            作成後のレンタルサーバへのデプロイ、運用も可能です。
+            </p>
+            <ul class="skill__itemList">
+              <li class="skill__item">Bash</li>
+              <li class="skill__item">ShellScript</li>
+              <li class="skill__item">PHP</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="skill__panel">
+          <img class="skill__img" src="images/others_icon.png" alt="">
+          <div class="skill__right">
+            <p>WEBサイト、ブログのWordPress移行、<br>
+            フレームワーク(Laravel等)利用のアプリ作成、その他対応いたします。
+            </p>
+            <ul class="skill__itemList">
+              <li class="skill__item">WordPress</li>
+              <li class="skill__item">Laravel</li>
+              <li class="skill__item">Git(Github)を利用した制作</li>
+            </ul>
+          </div>
+        </div>
 
       </div>
+    </div>
 
+    <footer class="footer">
+      <p class="footer__cr">©Copyright 2020 Saycheese</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

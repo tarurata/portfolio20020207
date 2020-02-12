@@ -16,6 +16,79 @@ body{
   width: 1200px;
 }
 
+/*お問合せモーダル*/
+
+.contact__modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: none;
+}
+
+.contact__form {
+  color: #000000;
+  margin:auto;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 550px;
+  height: 450px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+}
+
+.contactForm__cotainer {
+  margin: auto;
+  width: 340px;
+  height: 390px;
+}
+
+.contactForm__title {
+  padding:0px 0 15px 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.contactForm__text {
+  text-align: left;
+  font-size: 14px;
+  color: #7d7d7d;
+  margin-top: 30px;
+}
+
+.contactForm__input {
+  text-align: left;
+  font-size: 18px;
+	box-sizing: border-box;
+	width: 340px;
+  height: 30px;
+	transition: 0.3s;
+  letter-spacing: 1px;
+	border: none;
+	border-bottom: 1px solid #1b2538;
+	background: transparent;
+}
+
+.contactForm__submit {
+  color: white;
+  line-height: 50px;
+  background-color: black;
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 50px;
+}
+
+/*ヘッダー*/
+
 .header {
   background: #f2b84b;
   height: 100px;
@@ -29,6 +102,7 @@ body{
 
 .headerLeft__text { 
   font-size: 36px;
+  font-weight: 900;
   text-transform: uppercase;
   line-height: 100px;
 }
@@ -37,11 +111,85 @@ body{
   /*ヘッダ内で右寄せ*/
   display: flex;
   margin: auto 0 auto auto;
-
 }
 
 .header__item {
   font-size: 24px;
   padding-right: 50px;
   list-style: none;
+}
+
+.header__itemLink {
+  text-decoration: none;
+  color: #d95204;
+}
+
+.header__itemLink:hover {
+  text-decoration: underline;
+}
+
+/*メイン部分*/
+.main {
+  width: 1200px;
+  height: 1300px;
+  background-image: url("../images/bg.png");
+}
+
+.main__base {
+  width: 1200px;
+  height: 1300px;
+  background-color: rgba(255,255,255,0.88);
+}
+
+.main__title {
+  text-align: center;
+  /*font-weight: bolder;*/
+  font-size: 30px;
+  padding: 80px 0  60px 0;
+}
+
+.main__subtitle {
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 48px;
+}
+
+.skill__panel {
+  font-size: 24px;
+  width: 1033px;
+  height: 227px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.35));
+  margin:auto;
+  margin-bottom: 50px;
+  display: flex;
+}
+
+.skill__right {
+  width: 853px;
+  margin: auto 0 auto auto;
+}
+
+.skill__img {
+  float: left;
+  padding: 64px 50px 63px 30px;
+}
+
+.skill__item {
+  list-style: url(../images/list_icon.png);
+  margin-left: 35px;
+  margin-top: 5px;
+}
+
+.footer {
+  width: 1200px;
+  height: 100px;
+  background: #f2b84b;
+}
+
+.footer__cr {
+  text-align: center;
+  line-height: 100px;
+  margin: auto;
 }
